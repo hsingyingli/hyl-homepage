@@ -13,7 +13,7 @@ const SelectedPostsPage = ({posts, data, prev, next, content}) => {
   const router = useRouter();
   return (
     <Container maxW="container.lg">
-      <Box px={10} lineHeight={1.8}>
+      <Box lineHeight={1.8}>
         <Box mb={10}>
           <Heading my={2}>{data.title}</Heading>
           <Text>{data.date}</Text>
