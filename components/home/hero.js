@@ -4,7 +4,7 @@ const Hero = ({...rest}) => {
     <Box pb="100px" w='100%' h='100%' display='flex' alignItems='center' justifyContent='center' {...rest}>
       <Box>
       <Heading
-        fontSize={{base: '2.25rem', sm: '3rem', md: '3.5rem'}}
+        fontSize={{base: '2.5rem', sm: '3rem', md: '3.5rem'}}
         textAlign="center"
         fontWeight="bold"
         fontFamily='"M PLUS Rounded 1c", sans-serif'
@@ -13,7 +13,7 @@ const Hero = ({...rest}) => {
       </Heading>
 
       <Text
-        fontSize={{base: '1.5rem', sm: '2.25rem', md: '2.5rem'}}
+        fontSize={{base: '1.5rem', sm: '2rem', md: '2.5rem'}}
         textAlign="center"
         fontWeight="bold"
         fontFamily='"M PLUS Rounded 1c", sans-serif'

@@ -3,6 +3,7 @@ import {
   Spacer,
   Icon,
   Flex,
+  Link,
   Container,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -38,7 +39,7 @@ const Navbar = ({path}) => {
 
         <Flex align="center">
           <Flex align="center" mr={5}>
-            <LinkItem
+            <Link
               href="https://www.github.com/hsingyingli"
               path={path}
               w="40px"
@@ -48,8 +49,8 @@ const Navbar = ({path}) => {
               justifyContent="center"
             >
               <Icon w={5} h={5} as={FaGithub} />
-            </LinkItem>
-            <LinkItem
+            </Link>
+            <Link
               href="https://www.linkedin.com/in/星穎-李-9219a61b8"
               w="40px"
               h="40px"
@@ -58,7 +59,7 @@ const Navbar = ({path}) => {
               justifyContent="center"
             >
               <Icon w={5} h={5} as={FaLinkedinIn} />
-            </LinkItem>
+            </Link>
           </Flex>
           <ThemeToggleButton />
           <NavDropDownMenu />
