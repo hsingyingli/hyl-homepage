@@ -4,18 +4,17 @@ import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer';
 import {Box, Container, Heading, Text, Image} from '@chakra-ui/react';
-
 import {useRouter} from 'next/router';
 import ControlButtons from '../../../components/notes/prev-next-post-control';
 import sortByDate from '../../../lib/sortByDate';
 
-const SelectedPostsPage = ({posts, data, prev, next, content}) => {
+const SelectedPostsPage = ({data, prev, next, content}) => {
   const router = useRouter();
   return (
     <Container maxW="container.lg">
-      <Box lineHeight={1.8}>
-        <Box mb={10}>
-          <Heading my={2}>{data.title}</Heading>
+      <Box lineHeight={1.8} mx={{base:'none', md:10}} fontFamily='"M PLUS Rounded 1c", sans-serif'>
+        <Box mb={5}>
+          <Heading fontSize="3xl" my={2}>{data.title}</Heading>
           <Text>{data.date}</Text>
         </Box>
         <Image src={data.cover_image} />
@@ -40,7 +39,7 @@ export async function getStaticProps({params}) {
   const posts = fs.readdirSync(path.join('posts', params.noteId));
 
   const postDetail = posts
-    .map((post, index) => {
+    .map((post) => {
       const markdownWithMeta = fs.readFileSync(
         path.join('posts', params.noteId, post),
       );
@@ -58,11 +57,9 @@ export async function getStaticProps({params}) {
   const nextPost =
     nextPostIndex >= postDetail.length ? false : postDetail.at(nextPostIndex);
   const prevPost = prevPostIndex < 0 ? false : postDetail.at(prevPostIndex);
-  const allPosts = postDetail.map((element) => element.data.title);
 
   return {
     props: {
-      posts: allPosts,
       prev: prevPost,
       next: nextPost,
       data: selectedPost.data,
@@ -81,7 +78,7 @@ export async function getStaticPaths() {
       const markdownWithMeta = fs.readFileSync(
         path.join('posts', category, post),
       );
-      const {data, content} = matter(markdownWithMeta);
+      const {data} = matter(markdownWithMeta);
       paths.push({params: {noteId: category, pid: data.title}});
     });
   });

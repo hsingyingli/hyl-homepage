@@ -7,7 +7,7 @@ const Intro = ({...rest}) => {
     >
       <Box>
         <Heading mb={5} fontSize='5xl' fontFamily='"M PLUS Rounded 1c", sans-serif'>
-          Introduction
+          About me
         </Heading>
         <Text pt={3} fontSize='lg' fontWeight="500" lineHeight={1.8}>
           I am Hsing Ying Li, a graduate student in C.S at FJU. My research

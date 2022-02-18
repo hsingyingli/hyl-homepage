@@ -1,9 +1,9 @@
 import {
   Box,
-  Image,
   LinkBox,
   LinkOverlay,
   Text,
+  Image,
   useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
@@ -15,15 +15,15 @@ const Card = ({post, children, href, ...rest}) => {
       fontFamily='"M PLUS Rounded 1c", sans-serif'
       {...rest}
     >
-      <LinkBox cursor="pointer">
-        <Box borderWidth={1} borderRadius='10px' overflow='hidden' _hover={{transform: 'scale(1.1)'}}>
+      <LinkBox cursor="pointer" h="100%">
           <Image
             src={post.cover_image}
             alt={post.title}
-            placeholder="blur"
             loading="lazy"
+            width="300px"
+            height="150px"
+            rounded={10}
           />
-        </Box>
         <NextLink href={href} passHref>
           <LinkOverlay>
             <Text mt={2} fontWeight="500">

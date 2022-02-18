@@ -51,6 +51,7 @@ const NotesPage = ({collection, categories}) => {
                   href={`/posts/${item.category}/${item.data.title}`}
                   w="300px"
                   h="200px"
+                  overflow='hidden'
                 />
               );
             })}

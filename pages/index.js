@@ -4,11 +4,11 @@ import {Box, Container} from '@chakra-ui/react';
 import {motion, useAnimation} from 'framer-motion';
 import Hero from '../components/home/hero';
 import Intro from '../components/home/intro';
+
 const MotionBox = motion(Box);
 
 const HomePage = () => {
-  const [heroRef, heroInView] = useInView({threshold: 0.3});
-  const [introRef, introInView] = useInView({threshold: 0.4});
+  const [introRef, introInView] = useInView({threshold: 0.3});
   const animation = useAnimation();
 
   useEffect(() => {
