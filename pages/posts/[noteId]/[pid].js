@@ -53,8 +53,8 @@ export async function getStaticProps({params}) {
   const nextPostIndex = postDetail.indexOf(selectedPost) + 1;
   const prevPostIndex = postDetail.indexOf(selectedPost) - 1;
   const nextPost =
-    nextPostIndex >= postDetail.length ? false : postDetail.at(nextPostIndex);
-  const prevPost = prevPostIndex < 0 ? false : postDetail.at(prevPostIndex);
+    nextPostIndex >= postDetail.length ? false : postDetail[nextPostIndex];
+  const prevPost = prevPostIndex < 0 ? false : postDetail[prevPostIndex];
 
   return {
     props: {
