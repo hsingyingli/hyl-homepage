@@ -3,7 +3,7 @@ import {Tooltip, Button, Text} from '@chakra-ui/react';
 import {ChevronLeftIcon, ChevronRightIcon} from '@chakra-ui/icons';
 const ToolButton = ({post, href, position}) => {
   return (
-    <NextLink href={href + '/' + post.data.title}>
+    <NextLink href={href + '/' + post.data.id}>
       <Button
         leftIcon={
           position === 'left' ? <ChevronLeftIcon /> : <ChevronRightIcon />
