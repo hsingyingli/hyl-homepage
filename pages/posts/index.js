@@ -48,7 +48,7 @@ const NotesPage = ({collection, categories}) => {
                 <Card
                   key={index}
                   post={item.data}
-                  href={`/posts/${item.category}/${item.data.title}`}
+                  href={`/posts/${item.category}/${item.data.id}`}
                   maxW="300px"
                   maxH="250px"
                   overflow='hidden'

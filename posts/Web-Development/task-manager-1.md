@@ -3,6 +3,7 @@ title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - d
 date: 'February 18, 2022'
 excerpt: 'This series is about how to build a task management web app use React.Js、Node.Js and Mongodb.'
 cover_image: '/images/posts/Web-Development/task-manager-1.png'
+id: 'task manager 1'
 ---
 > This series aim to learning React Js, Node Js and Mongodb by building a task management web app. 
 > This app support user authorization, create tasks which stored in Mongodb, assign task to other user, etc.

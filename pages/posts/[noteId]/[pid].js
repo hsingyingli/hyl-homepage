@@ -47,9 +47,9 @@ export async function getStaticProps({params}) {
       return {data, content};
     })
     .sort(sortByDate);
-
+  console.log(postDetail[0].data.id)  
   const selectedPost = postDetail.find((element) => {
-    return element.data.title === params.pid;
+    return element.data.id === params.pid;
   });
   const nextPostIndex = postDetail.indexOf(selectedPost) + 1;
   const prevPostIndex = postDetail.indexOf(selectedPost) - 1;
@@ -79,7 +79,7 @@ export async function getStaticPaths() {
         path.join('posts', category, post),
       );
       const {data} = matter(markdownWithMeta);
-      paths.push({params: {noteId: category, pid: data.title}});
+      paths.push({params: {noteId: category, pid: data.id}});
     });
   });
   return {
