@@ -113,7 +113,7 @@ const dummy_data = {
 
 #### Next Step
 
+- create routes using express 
 - hash user password using bcrypt package 
 - define pre function of user scheme
-- create routes using express 
 
