@@ -110,8 +110,66 @@ app.use('/users', userRouter);
 ...
 ```
 #### Create a user
+##### Before we work on createUser function, we need to deal with hash user's password and generate authorization token.
+1. install required package
+```
+npm i bcryptjs jsonwebtoken 
+```
+2. we write more code about hashing and generate token in models/user.js 
+```
+// in models/user.js 
+// we first hash user's password before saving into our database using bcryptjs.
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
+...
+userSchema.pre('save', async function(next) {
+  const user = this 
+  if (user.isModified('password')) {
+    user.password = await bcrypt.hash(
+      user.password,
+      parseInt(process.env.HASH_SALT),
+    );
+  }
+  next();
+})
 
-To test our api, we use **Postman**
+// we need to generate auth token using jsonwebtoken and store into database for authorization 
+
+userSchema.methods.generateAuthToken = async function () {
+  const user = this;
+  const token = jwt.sign({_id: user._id.toString()}, process.env.JWT_SECRET);
+  user.tokens = user.tokens.concat({token});
+  await user.save();
+  return token;
+}
+...
+
+```
+3. Let us finish createUser function
+
+```
+// in controllers/user.js 
+import userModel from '../models/user.js';
+
+export async function createUser (req) {
+   const user = new userModel(req.body)
+   try {
+      const token = user.generateAuthToken(); // here, we generate auth token and save user 
+      res.status(201).send({message: 'create a user'})
+   } catch (error) {
+      res.status(400).send({error})
+   }
+}
+```
+4. We can test our api using ***Postman***
+
+#### Conclusion
+- create routes using express 
+- hash user password using bcrypt package 
+- generate jwt token for authorization
+#### Next Step
+- finish get, patch, delete user.
+- write auth method in middleware
 
 
