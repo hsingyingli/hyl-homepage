@@ -2,7 +2,7 @@
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 1'
 date: 'February 18, 2022'
 excerpt: 'This series is about how to build a task management web app use React.Js、Node.Js and Mongodb.'
-cover_image: '/images/posts/Web-Development/task-manager-1.png'
+cover_image: '/images/posts/Web-Development/task-manager.jpg'
 id: 'task manager 1'
 ---
 
