@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 const Logo = () => {
   return (
     <NextLink href="/" passHref>
-        <Flex>
+        <Flex cursor='pointer'>
           <Image
             src="/logo.svg"
             objectFit="cover"

@@ -1,7 +1,7 @@
 ---
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 1'
 date: 'February 18, 2022'
-excerpt: 'This series is about how to build a task management web app use React.Js、Node.Js and Mongodb.'
+excerpt: 'Day 1: mongoose - data validation (Backend)'
 cover_image: '/images/posts/Web-Development/task-manager.jpg'
 id: 'task manager 1'
 ---
@@ -44,7 +44,7 @@ mongoose.connect(process.env.DB_CONNECTION, () => {
 connect to DB
 ```
 
-#### Work on User Schema  
+#### User Schema  
 We create models folder in which we define all kinds of scheme. 
 ```
 root
@@ -54,8 +54,8 @@ root
      └─── src
         ├── server.js
         └── models
-          ├── ...
-          └── user.js
+          ├── task.js // for tasks
+          └── user.js // for users
 ```
 
 Mongoose scheme defines the structure of the document, default values, validators, etc. For example:
@@ -104,6 +104,39 @@ const dummy_data = {
 
 ```
 
+#### Task Schema  
+```
+// in models/task.js 
+import mongoose from 'mongoose';
+import validator from 'validator';
+
+const taskScheme = mongoose.Schema({
+  description: {
+    type: String,
+    require: true,
+    trim: true,
+  },
+  progress: {
+    type: Number,
+    default: 0,
+    vaildate(value) {
+      if (value<0 || value > 100) {
+        throw new Error('prgress must greater than zero and less then one hundred')
+      }
+    }
+  },
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    require: true,
+    ref: 'users',
+  },
+}, {
+  timestamps: true
+});
+
+const taskModel = mongoose.model('tasks', taskScheme, 'tasks');
+export default taskModel;
+```
 
 #### Conclusion
 

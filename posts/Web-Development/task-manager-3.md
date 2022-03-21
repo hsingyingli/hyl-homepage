@@ -1,7 +1,7 @@
 ---
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 3'
 date: 'February 25, 2022'
-excerpt: 'This series is about how to build a task management web app use React.Js、Node.Js and Mongodb.'
+excerpt: 'Day 3: express routes and middlewares (Backend)'
 cover_image: '/images/posts/Web-Development/task-manager.jpg'
 id: 'task manager 3'
 ---
@@ -58,7 +58,7 @@ export default async function auth(req, res, next) {
   try {
     const token = req.header('Authorization').replace('Bearer ', '');
 
-    const decode = jwt.verify(token, process.env.JWT_SECRET);
+    const decode = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
     const user = await userModel.findOne({_id: decode._id, 'tokens.token': token});
 
@@ -135,6 +135,6 @@ export async function deleteUser(req, res) {
 #### Conclusion
 - finish get, patch, delete user.
 - write auth method in middleware
--
+
 #### Next Step
 - login and logout

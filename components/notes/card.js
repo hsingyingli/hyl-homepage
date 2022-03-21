@@ -27,7 +27,7 @@ const Card = ({post, children, href, ...rest}) => {
         <NextLink href={href} passHref>
           <LinkOverlay>
             <Text mt={2} fontWeight="500">
-              {post.title}
+              {post.excerpt}
             </Text>
           </LinkOverlay>
         </NextLink>

@@ -1,7 +1,7 @@
 ---
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 4'
 date: 'February 26, 2022'
-excerpt: 'This series is about how to build a task management web app use React.Js、Node.Js and Mongodb.'
+excerpt: 'Day 4: Login and Logout (Backend)'
 cover_image: '/images/posts/Web-Development/task-manager.jpg'
 id: 'task manager 4'
 ---
@@ -65,9 +65,9 @@ export async function loginUser(req, res) {
       req.body.email,
       req.body.password,
     );
-    const token = await user.generateAuthToken();
+    const {accessToken, refreshToken} = await user.generateAuthToken();
 
-    res.send({user, token});
+    res.send({user, accessToken});
   } catch (error) {
     res.status(400).send({error});
   }

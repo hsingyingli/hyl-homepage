@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import {useState} from 'react';
 import {motion} from 'framer-motion';
-import {Box, Container, Select, Heading, SimpleGrid} from '@chakra-ui/react';
+import {Box, Container, Select, Heading, SimpleGrid, Text} from '@chakra-ui/react';
 import Card from '../../components/notes/card';
 import sortByDate from '../../lib/sortByDate';
 
@@ -31,6 +31,7 @@ const NotesPage = ({collection, categories}) => {
         >
           {'<CodingDiary />'}
         </Heading>
+        <Text textAlign='center' mt='8' fontSize='2xl'>Just Diary</Text>
         <Box maxW="300px" m={10}>
           <Heading
             fontSize="xl"
