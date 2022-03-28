@@ -7,6 +7,7 @@ const NavMenu = ({path}) => {
       <Stack direction="row" spacing={3} align="center">
         <LinkItem path={path} href="/"> Home</LinkItem>
         <LinkItem path={path} href="/posts"> Posts</LinkItem>
+        <LinkItem path={path} href="/playground"> Playground</LinkItem>
       </Stack>
     </Box>
   );

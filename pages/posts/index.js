@@ -3,8 +3,14 @@ import path from 'path';
 import matter from 'gray-matter';
 import {useState} from 'react';
 import {motion} from 'framer-motion';
-import {Box, Container, Select, Heading, SimpleGrid, Text} from '@chakra-ui/react';
-import Card from '../../components/notes/card';
+import {
+  Box,
+  Container,
+  Select,
+  Heading,
+  SimpleGrid,
+} from '@chakra-ui/react';
+import Post from '../../components/notes/post';
 import sortByDate from '../../lib/sortByDate';
 
 const MotionBox = motion(Box);
@@ -31,7 +37,6 @@ const NotesPage = ({collection, categories}) => {
         >
           {'<CodingDiary />'}
         </Heading>
-        <Text textAlign='center' mt='8' fontSize='2xl'>Just Diary</Text>
         <Box maxW="300px" m={10}>
           <Heading
             fontSize="xl"
@@ -64,7 +69,7 @@ const NotesPage = ({collection, categories}) => {
               })
               .map((item, index) => {
                 return (
-                  <Card
+                  <Post
                     key={index}
                     post={item.data}
                     href={`/posts/${item.category}/${item.data.id}`}

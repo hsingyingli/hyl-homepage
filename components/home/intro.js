@@ -1,22 +1,28 @@
-import NextLink from 'next/link'
+import NextLink from 'next/link';
 import {Box, Text, Heading, Progress, Button} from '@chakra-ui/react';
 const Intro = ({...rest}) => {
   return (
-    <Box
-      {...rest}
-    >
+    <Box {...rest}>
       <Box>
-        <Heading mb={5} fontSize='5xl' fontFamily='"M PLUS Rounded 1c", sans-serif'>
+        <Heading
+          mb={5}
+          fontSize="5xl"
+          fontFamily='"M PLUS Rounded 1c", sans-serif'
+        >
           About me
         </Heading>
-        <Text pt={3} fontSize='lg' fontWeight="500" lineHeight={1.8}>
-          I am Hsing Ying Li, a graduate student in C.S at FJU. My research
+        <Text pt={3} fontSize="lg" fontWeight="500" lineHeight={1.8}>
+          I am Hsing Ying Li, a graduate student in C.S. at FJU. My research
           interests include Machine Learning in FinTech. Meanwhile, I also
           self-learn web development.
         </Text>
       </Box>
       <Box mt={10}>
-        <Heading mb={5} fontSize='5xl' fontFamily='"M PLUS Rounded 1c", sans-serif'>
+        <Heading
+          mb={5}
+          fontSize="5xl"
+          fontFamily='"M PLUS Rounded 1c", sans-serif'
+        >
           Skills
         </Heading>
         <Box>
@@ -33,12 +39,21 @@ const Intro = ({...rest}) => {
           </Text>
           <Progress value={60} size="xs" colorScheme="pink" />
         </Box>
-        <Box mt={10} fontWeight="500" fontSize='lg' lineHeight={1.8}>
+        <Box mt={10} fontWeight="500" fontSize="lg" lineHeight={1.8}>
           C, C++, Python, Pytorch, Numpy, Pandas, Matplotlib, Sklearn, React.js,
           Next.js, React Native, HTML, CSS, Javascript, Node.js, MongoDB, MySQL
         </Box>
-        <Box textAlign='center' mt={5}>
-          <NextLink href='/posts'><Button m={6} colorScheme='teal'>Posts</Button></NextLink>
+        <Box textAlign="center" mt={5}>
+          <NextLink href="/posts">
+            <Button m={6} colorScheme="teal">
+              Posts
+            </Button>
+          </NextLink>
+          <NextLink href="/playground">
+            <Button m={6} colorScheme="teal">
+              Playground
+            </Button>
+          </NextLink>
         </Box>
       </Box>
     </Box>

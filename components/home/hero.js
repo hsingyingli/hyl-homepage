@@ -27,7 +27,7 @@ const Hero = ({...rest}) => {
         fontWeight={500}
         textAlign="center"
       >
-        (Web Developer /{' '}
+        (Web Development /{' '}
         <Text
           as="span"
           color="teal.300"
