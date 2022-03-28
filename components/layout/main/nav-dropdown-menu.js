@@ -19,6 +19,9 @@ const NavMenu = () => {
           <NextLink href="/posts" passHref>
             <MenuItem>Posts</MenuItem>
           </NextLink>
+          <NextLink href="/playground" passHref>
+            <MenuItem>Playground</MenuItem>
+          </NextLink>
         </MenuList>
       </Menu>
     </Box>

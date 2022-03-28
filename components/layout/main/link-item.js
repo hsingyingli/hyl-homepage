@@ -3,7 +3,6 @@ import NextLink from 'next/link';
 
 const LinkItem = ({href, path, children, ...rest}) => {
   const active = path === href;
-  console.log(path, href)
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
   return (
     <NextLink href={href}>
