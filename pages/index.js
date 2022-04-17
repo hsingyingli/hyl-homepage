@@ -33,8 +33,7 @@ const HomePage = () => {
   }, [introInView, animation]);
 
   return (
-    <Container maxW='container.lg'>
-
+    <Container maxW="container.lg">
       {/* Hero section */}
       <MotionBox
         className="hero"
@@ -48,8 +47,15 @@ const HomePage = () => {
       </MotionBox>
 
       {/* Introduction section */}
-      <Box  display='flex' alignItems='center' justifyContent='center' minH="calc(100vh - 100px)" ref={introRef} className="introduction">
-        <MotionBox animate={animation} maxW='container.md'>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        minH="calc(100vh - 100px)"
+        ref={introRef}
+        className="introduction"
+      >
+        <MotionBox animate={animation} maxW="container.md">
           <Intro fontFamily='"M PLUS Rounded 1c", sans-serif' px={10} />
         </MotionBox>
       </Box>

@@ -13,7 +13,7 @@ id: 'task manager 8'
 - axios
 
 ### Source Code 
-[github](https://github.com/hsingyingli/task-manager-project/tree/main/frontend) 
+[github](https://github.com/hsingyingli/task-manager-project) 
 
 #### Current Directory structure
 ```

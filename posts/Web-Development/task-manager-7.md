@@ -64,7 +64,7 @@ function App() {
 }
 ```
 #### SignIn, Register, Home, RequireAuth, PersistLogin 
-source code: [github](https://github.com/hsingyingli/task-manager-project/tree/main/frontend) 
+source code: [github](https://github.com/hsingyingli/task-manager-project) 
 
 #### Conclusion
 - Create protect routes 
