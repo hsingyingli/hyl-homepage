@@ -1,5 +1,6 @@
 ---
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 3'
+app: 'Task Management App'
 date: 'February 25, 2022'
 excerpt: 'Day 3: express routes and middlewares (Backend)'
 cover_image: '/images/posts/Web-Development/task-manager.jpg'

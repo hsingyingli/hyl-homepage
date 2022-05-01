@@ -1,5 +1,6 @@
 ---
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 2'
+app: 'Task Management App'
 date: 'February 19, 2022'
 excerpt: 'Day 2: access token and refresh token (Backend)'
 cover_image: '/images/posts/Web-Development/task-manager.jpg'

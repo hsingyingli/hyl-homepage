@@ -1,5 +1,6 @@
 ---
 title: 'Build a Task Management web app using React.js, Node.Js and  Mongodb - day 6'
+app: 'Task Management App'
 date: 'March 02, 2022'
 excerpt: 'Day 6: auth context (frontend)'
 cover_image: '/images/posts/Web-Development/task-manager.jpg'

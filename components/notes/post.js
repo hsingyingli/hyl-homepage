@@ -26,6 +26,9 @@ const Post = ({post, children, href, ...rest}) => {
         <NextLink href={href} passHref>
           <LinkOverlay>
             <Text mt={2} fontWeight="500">
+              {post.app}
+            </Text>
+            <Text mt={2} fontWeight="500">
               {post.excerpt}
             </Text>
           </LinkOverlay>
