@@ -54,7 +54,7 @@ const Navbar = ({path}) => {
             <Icon w={5} h={5} as={FaGithub} />
           </Link>
           <Link
-            href="www.linkedin.com/in/hsing-li-9219a61b8"
+            href="https://www.linkedin.com/in/hsing-li-9219a61b8"
             w="40px"
             h="40px"
             display="flex"
