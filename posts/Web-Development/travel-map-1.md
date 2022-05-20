@@ -14,6 +14,9 @@ id: 'travel map 1'
 ### Source Code 
 [github](https://github.com/hsingyingli/travel-map) 
 
+### Demo 
+[Link](https://travel-map-rust.vercel.app/)
+
 
 #### 1. Global theme
 
