@@ -6,7 +6,10 @@ const ToolButton = ({post, href, position}) => {
     <NextLink href={href + '/' + post.data.id}>
       <Button
         leftIcon={
-          position === 'left' ? <ChevronLeftIcon /> : <ChevronRightIcon />
+          position === 'left' ? <ChevronLeftIcon /> : null 
+        }
+        rightIcon={
+          position === 'right' ? <ChevronRightIcon/> : null
         }
       >
         <Tooltip label={post.data.title}>
