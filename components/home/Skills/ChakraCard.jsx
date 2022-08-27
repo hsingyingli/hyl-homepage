@@ -44,7 +44,7 @@ const ChakraCard = ({ context }) => {
               {name}
             </Text>
             {tags.map((tag) =>
-              <Tag variant='outline' m={1} size='sm' colorScheme='teal'>{tag}</Tag>
+              <Tag key={tag} variant='outline' m={1} size='sm' colorScheme='teal'>{tag}</Tag>
             )}
           </LinkOverlay>
         </NextLink>
