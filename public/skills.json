@@ -2,12 +2,18 @@
   "Machine Learning": {
     "score": 80,
     "color": "teal",
-    "tools": ["python", "pytorch", "numpy", "pandas", "sklearn", "matplotlib", "Computer Vision", "Time series"],
+    "tools": ["python", "pytorch", "numpy", "pandas", "sklearn", "matplotlib", "Computer Vision", "Time series", "Meta Learning"],
     "posts": [{
       "name": "Segmantic Segmentation",
       "src": "https://github.com/hsingyingli/FC-DenseNet",
       "imageSrc":"/images/segmantic.png",
       "tags": ["Computer Vision", "pytorch"]
+    }, {
+      "name": "Published Conference Paper",
+      "src": "https://ieeexplore.ieee.org/document/9658607",
+      "imageSrc":"/images/ieee.png",
+      "tags": ["IEEE", "stock prediction", "time series", "meta learning"]
+
     }]
   },
     "Web Development": {
