@@ -33,7 +33,7 @@ const Hero = ({ ...rest }) => {
             color="teal.300"
             whiteSpace="nowrap"
           >
-            DevOps /
+            DevOps
           </Text>
           )
         </Text>

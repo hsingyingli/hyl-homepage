@@ -14,21 +14,11 @@
     "@emotion/styled": "^11.6.0",
     "chakra-ui-markdown-renderer": "^4.0.0",
     "framer-motion": "^5.6.0",
-    "gray-matter": "^4.0.3",
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-awesome-reveal": "^3.8.1",
-    "react-code-blocks": "^0.0.9-0",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "react-intersection-observer": "^8.33.1",
-    "react-markdown": "^8.0.0",
-    "react-simple-typewriter": "^3.0.1",
-    "react-syntax-highlighter": "^15.4.5",
-    "react-tagcloud": "^2.2.0",
-    "rehype-highlight": "^5.0.2",
-    "rehype-raw": "^6.1.1",
-    "remark-gfm": "^3.0.1"
+    "react-intersection-observer": "^8.33.1"
   },
   "devDependencies": {
     "eslint": "8.8.0",
