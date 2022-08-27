@@ -1,0 +1,46 @@
+{ 
+  "Machine Learning": {
+    "score": 80,
+    "color": "teal",
+    "tools": ["python", "pytorch", "numpy", "pandas", "sklearn", "matplotlib", "Computer Vision", "Time series"],
+    "posts": [{
+      "name": "Segmantic Segmentation",
+      "src": "https://github.com/hsingyingli/FC-DenseNet",
+      "imageSrc":"/images/segmantic.png",
+      "tags": ["Computer Vision", "pytorch"]
+    }]
+  },
+    "Web Development": {
+    "score": 70,
+    "color": "orange",
+    "tools": ["html", "css", "javascript", "React", "Next", "ChakraUI", "Styled Component", "Node", "MySQL", "MongoDB"],
+    "posts": [{
+      "name": "Task Management",
+      "src": "https://github.com/hsingyingli/task-manager-project",
+      "imageSrc":"/images/task.png",
+      "tags": ["0Auth", "JWT", "React", "Express", "MongoDB"]
+    }, {
+      "name": "Netflix Clone",
+      "src": "https://github.com/hsingyingli/netflix-clone",
+      "imageSrc":"/images/netflix.png",
+      "tags": ["Magic", "youtube", "NextJs", "Styled Component"]
+
+    },{
+      "name": "Chat App",
+      "src": "https://gitlab.com/hsingyingli/chat-app",
+      "imageSrc":"/images/chat-room.png",
+      "tags": ["Gitlab CI CD", "Docker", "JS", "CSS", "HTML", "MongoDB"]
+    }]
+  },
+    "DevOps": {
+    "score": 60,
+    "color": "pink",
+    "tools": ["Git Version Control", "Docker", "Kubernetes", "Gitlab CICD", "AWS CICD", "Jenkins CICD"],
+    "posts": [{
+      "name": "Chat App",
+      "src": "https://gitlab.com/hsingyingli/chat-app",
+      "imageSrc":"/images/chat-room.png",
+      "tags": ["Gitlab CICD", "Docker", "JS", "CSS", "HTML", "MongoDB"]
+    }]
+  }
+}
